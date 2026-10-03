@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syarat, Ketentuan, dan Kebijakan Privasi — WeiDro</title>
+<meta name="description" content="Syarat dan Ketentuan serta Kebijakan Privasi WeiDro untuk penggunaan layanan pemesanan dan pengiriman.">
+<style>
+  :root {
+    --primary: #3185D3;
+    --primary-dark: #2569A9;
+    --primary-soft: #EBF3FA;
+    --text: #0F2742;
+    --text-muted: #526E8C;
+    --bg: #F8F8F8;
+    --card: #ffffff;
+    --border: #EBF3FA;
+    --radius: 8px;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .04);
+    --max: 1180px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  .header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .app-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transform: scale(1.8);
+    margin-right: 10px;
+  }
+  .app-name { color: var(--primary); font-size: 24px; font-weight: 650; }
+  .app-tagline { color: var(--text-muted); font-size: 16px;  }
+
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 44px 24px 64px;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 52px;
+    align-items: start;
+  }
+  .sidebar {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    padding: 4px 0;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  .sidebar h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .sidebar ul { list-style: none; }
+  .sidebar .nav-group + .nav-group { margin-top: 24px; }
+  .sidebar .nav-group-title {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    margin: 12px 0 7px;
+    padding: 0 10px;
+  }
+  .sidebar li a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.45;
+    transition: background-color .15s, color .15s;
+  }
+  .sidebar li a:hover { background: var(--primary-soft); color: var(--primary-dark); }
+  .sidebar li a.active { background: var(--primary-soft); color: var(--primary-dark); font-weight: 600; }
+
+  .content {
+    background: transparent;
+    padding: 0;
+    min-width: 0;
+  }
+  .badge {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-dark);
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid var(--border);
+    padding: 4px 9px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+  .content h1 { font-size: clamp(26px, 4vw, 32px); line-height: 1.25; letter-spacing: 0; margin-bottom: 10px; }
+  .content .last-updated { color: var(--text-muted); font-size: 14px; margin-bottom: 38px; }
+  .doc-divider {
+    margin: 44px 0 26px;
+    padding: 0 0 14px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  .doc-divider h2 { color: var(--text); font-size: 21px; line-height: 1.35; }
+  .doc-divider p { color: var(--text-muted); margin-top: 4px; font-size: 14px; }
+  section { margin-bottom: 38px; scroll-margin-top: 20px; }
+  section:last-child { margin-bottom: 0; }
+  section h3 {
+    font-size: clamp(19px, 3vw, 22px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--border);
+  }
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 5px;
+    border-radius: 6px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  section p { margin-bottom: 14px; }
+  ul.checklist, ul.dotlist { list-style: none; margin: 12px 0 18px; }
+  ul.checklist li {
+    position: relative;
+    padding: 8px 12px 8px 36px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  ul.checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 14px;
+    top: 9px;
+    color: var(--primary);
+    font-weight: 800;
+  }
+  ul.dotlist li { position: relative; padding-left: 24px; margin-bottom: 8px; }
+  ul.dotlist li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+  .callout {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--primary);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+  .callout strong { color: var(--primary-dark); }
+  .email-link { color: var(--primary); font-weight: 600; text-decoration: none; word-break: break-all; }
+  .email-link:hover { text-decoration: underline; }
+  .footer {
+    background: #fff;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 22px 24px;
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .footer strong { color: var(--text); }
+
+  @media (max-width: 900px) {
+    .container { grid-template-columns: 1fr; gap: 28px; padding-top: 30px; }
+    .sidebar { position: static; height: auto; max-height: 280px; overflow-y: auto; padding: 0 0 18px; border-bottom: 1px solid var(--border); }
+    .sidebar .nav-group { display: inline-block; vertical-align: top; width: calc(50% - 12px); }
+    .sidebar .nav-group + .nav-group { margin: 0 0 0 18px; }
+    .doc-divider { scroll-margin-top: 16px; }
+  }
+  @media (max-width: 480px) {
+    .header-inner { padding: 12px 16px; }
+    .container { padding: 24px 16px 44px; gap: 22px; }
+    .sidebar { padding: 0 0 14px; }
+    .sidebar .nav-group { display: block; width: auto; }
+    .sidebar .nav-group + .nav-group { margin: 18px 0 0; }
+    .sidebar h3 { margin-bottom: 8px; }
+    .sidebar li a { padding: 7px 8px; font-size: 12px; }
+    .content { padding: 0; }
+    section { margin-bottom: 36px; }
+    section h3 { gap: 10px; }
+    .num { min-width: 28px; height: 28px; font-size: 13px; border-radius: 6px; }
+    ul.checklist li { padding: 8px 10px 8px 34px; }
+    ul.checklist li::before { left: 10px; top: 8px; }
+    .callout { padding: 14px 16px; }
+    .footer { padding: 24px 16px; }
+  }
+</style>
+</head>
+<header class="header">
+  <div class="header-inner">
+    <img src="https://lh3.googleusercontent.com/d/1l5CveGD437sTI0xP2GnkQ6zpvaYtjyAG" alt="WeiDro Logo" class="app-logo">
+      <div class="app-name">WeiDro</div> 
+      <!-- <div class="app-tagline">Water Solution</div> -->
+  </div>
+</header>
+
+<div class="container">
+  <nav class="sidebar" aria-label="Daftar isi dokumen hukum">
+    <h3>Daftar Isi</h3>
+    <div class="nav-group">
+      <p class="nav-group-title">Syarat dan Ketentuan</p>
+      <ul>
+        <li><a href="#terms-persetujuan">1. Persetujuan</a></li>
+        <li><a href="#terms-layanan">2. Layanan WeiDro</a></li>
+        <li><a href="#terms-akun">3. Akun Pengguna</a></li>
+        <li><a href="#terms-pemesanan">4. Pemesanan</a></li>
+        <li><a href="#terms-pembayaran">5. Harga dan Pembayaran</a></li>
+        <li><a href="#terms-pengiriman">6. Pengiriman</a></li>
+        <li><a href="#terms-pembatalan">7. Pembatalan dan Pengembalian Dana</a></li>
+        <li><a href="#terms-tanggung-jawab">8. Tanggung Jawab Pengguna</a></li>
+        <li><a href="#terms-ketersediaan">9. Ketersediaan Layanan</a></li>
+        <li><a href="#terms-hak-kekayaan">10. Hak Kekayaan Intelektual</a></li>
+        <li><a href="#terms-pembatasan">11. Pembatasan Tanggung Jawab</a></li>
+        <li><a href="#terms-perubahan">12. Perubahan Ketentuan</a></li>
+        <li><a href="#terms-hukum">13. Hukum yang Berlaku</a></li>
+        <li><a href="#terms-kontak">14. Kontak</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <p class="nav-group-title">Kebijakan Privasi</p>
+      <ul>
+        <li><a href="#privacy-pengenalan">1. Pengenalan</a></li>
+        <li><a href="#privacy-dasar-hukum">2. Dasar Hukum Pengolahan Data</a></li>
+        <li><a href="#privacy-pengumpulan">3. Pengumpulan Informasi</a></li>
+        <li><a href="#privacy-pembayaran">4. Pembayaran</a></li>
+        <li><a href="#privacy-pembaruan">5. Memperbarui Informasi</a></li>
+        <li><a href="#privacy-keamanan">6. Keamanan Informasi</a></li>
+        <li><a href="#privacy-lokasi">7. Akses Lokasi</a></li>
+        <li><a href="#privacy-hak-pengguna">8. Hak Subjek Data</a></li>
+        <li><a href="#privacy-penyingkapan">9. Penyingkapan Informasi</a></li>
+        <li><a href="#privacy-data-perangkat">10. Data Perangkat dan Analytics</a></li>
+        <li><a href="#privacy-data-anak">11. Perlindungan Data Anak</a></li>
+        <li><a href="#privacy-pelanggaran-data">12. Pelanggaran Data</a></li>
+        <li><a href="#privacy-perubahan">13. Perubahan Kebijakan</a></li>
+        <li><a href="#privacy-keluhan">14. Keluhan dan Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+    <span class="badge">Dokumen Hukum WeiDro</span>
+    <h1>Syarat, Ketentuan, dan Kebijakan Privasi</h1>
+    <p class="last-updated">Berlaku efektif sejak: 1 Oktober 2026</p>
+
+    <div class="doc-divider" id="terms-heading">
+      <h2>Syarat dan Ketentuan</h2>
+      <p>Ketentuan penggunaan layanan pemesanan dan pengiriman WeiDro.</p>
+    </div>
+
+    <section id="terms-persetujuan">
+      <h3><span class="num">1</span> Persetujuan</h3>
+      <p>Syarat dan Ketentuan ini mengatur penggunaan aplikasi mobile dan website WeiDro, termasuk layanan pemesanan dan pengiriman yang tersedia melalui platform tersebut. Dengan mengakses platform, membuat akun, atau melakukan pemesanan, Anda menyatakan telah membaca dan menyetujui ketentuan ini.</p>
+      <p>Jika Anda tidak menyetujui ketentuan ini, jangan gunakan layanan WeiDro. Kebijakan Privasi WeiDro menjelaskan bagaimana data pribadi Anda dikumpulkan dan digunakan, dan menjadi bagian dari ketentuan penggunaan layanan kami.</p>
+    </section>
+    <section id="terms-layanan">
+      <h3><span class="num">2</span> Layanan WeiDro</h3>
+      <p>WeiDro menyediakan platform untuk melihat layanan atau barang yang tersedia, membuat pemesanan, mengelola transaksi, dan memperoleh informasi pengiriman. Ketersediaan barang, wilayah layanan, dan fitur dapat berbeda berdasarkan lokasi serta kondisi operasional.</p>
+      <p>Informasi spesifik mengenai barang, biaya, perkiraan waktu, dan ketentuan pesanan akan ditampilkan pada platform sebelum Anda menyelesaikan pemesanan. Informasi tersebut berlaku untuk transaksi terkait.</p>
+    </section>
+    <section id="terms-akun">
+      <h3><span class="num">3</span> Akun Pengguna</h3>
+      <p>Untuk menggunakan fitur tertentu, Anda mungkin perlu membuat akun dan memberikan informasi yang akurat, lengkap, serta terbaru. Anda bertanggung jawab menjaga kerahasiaan kredensial akun dan atas aktivitas yang dilakukan melalui akun Anda.</p>
+      <p>Segera hubungi WeiDro apabila Anda mengetahui adanya penggunaan akun tanpa izin atau dugaan masalah keamanan. WeiDro dapat meminta verifikasi identitas yang wajar untuk melindungi akun dan transaksi.</p>
+    </section>
+    <section id="terms-pemesanan">
+      <h3><span class="num">4</span> Pemesanan</h3>
+      <p>Pastikan rincian pesanan, alamat, nomor kontak, dan instruksi pengiriman sudah benar sebelum mengonfirmasi pesanan. Setelah pesanan dikirim, perubahan mungkin tidak dapat dilakukan atau dapat memengaruhi proses dan biaya pengiriman.</p>
+      <p>Pengajuan pesanan merupakan permintaan Anda untuk membeli atau menggunakan layanan yang dipilih. Pesanan dianggap diterima setelah status atau konfirmasi penerimaan ditampilkan oleh WeiDro. Jika pesanan tidak dapat dipenuhi, kami akan memberikan informasi melalui platform atau kontak yang tersedia.</p>
+    </section>
+    <section id="terms-pembayaran">
+      <h3><span class="num">5</span> Harga dan Pembayaran</h3>
+      <p>Harga dan biaya yang berlaku akan ditampilkan sebelum Anda mengonfirmasi pesanan. Anda bertanggung jawab memastikan pembayaran dilakukan menggunakan metode yang tersedia dan mengikuti instruksi yang ditampilkan pada platform.</p>
+      <p>Pesanan dapat diproses setelah pembayaran terverifikasi apabila pembayaran di muka dipersyaratkan. Riwayat transaksi dapat diakses melalui akun Anda. Jika terdapat perbedaan atau kendala pembayaran, hubungi kami dengan menyertakan informasi pesanan yang relevan.</p>
+    </section>
+    <section id="terms-pengiriman">
+      <h3><span class="num">6</span> Pengiriman</h3>
+      <p>Pengiriman dilakukan ke alamat atau lokasi yang Anda berikan dan dapat melibatkan mitra pengemudi atau penyedia layanan pengiriman. Anda bertanggung jawab memastikan alamat dan nomor kontak dapat digunakan untuk keperluan pengiriman.</p>
+      <p>Perkiraan waktu pengiriman merupakan estimasi dan dapat berubah karena kondisi lalu lintas, cuaca, ketersediaan, atau keadaan operasional lainnya. Jika fitur lokasi digunakan, izin lokasi perangkat Anda mungkin diperlukan sebagaimana dijelaskan lebih lanjut dalam Kebijakan Privasi WeiDro.</p>
+    </section>
+    <section id="terms-pembatalan">
+      <h3><span class="num">7</span> Pembatalan dan Pengembalian Dana</h3>
+      <p>Ajukan pembatalan atau sampaikan masalah pesanan melalui kanal layanan pelanggan WeiDro sesegera mungkin. Kemungkinan pembatalan, penggantian, atau pengembalian dana bergantung pada status pesanan, jenis layanan, dan ketentuan yang ditampilkan pada saat transaksi.</p>
+      <div class="callout"><strong>Perhatian:</strong> Periksa ringkasan pesanan dan ketentuan yang ditampilkan sebelum pembayaran. Jika permohonan Anda disetujui, proses pengembalian dana mengikuti metode pembayaran dan prosedur yang berlaku.</div>
+    </section>
+    <section id="terms-tanggung-jawab">
+      <h3><span class="num">8</span> Tanggung Jawab Pengguna</h3>
+      <p>Dalam menggunakan WeiDro, Anda setuju untuk:</p>
+      <ul class="dotlist">
+        <li>Memberikan informasi yang benar dan tidak menggunakan identitas atau metode pembayaran milik orang lain tanpa izin.</li>
+        <li>Menggunakan platform sesuai hukum dan tidak mengganggu keamanan, ketersediaan, atau penggunaan layanan oleh pihak lain.</li>
+        <li>Tidak mencoba memperoleh akses tanpa izin, menyebarkan perangkat lunak berbahaya, atau menyalahgunakan fitur platform.</li>
+        <li>Memastikan Anda berwenang menerima barang atau layanan yang dipesan di lokasi tujuan.</li>
+      </ul>
+    </section>
+    <section id="terms-ketersediaan">
+      <h3><span class="num">9</span> Ketersediaan Layanan</h3>
+      <p>WeiDro berupaya menjaga platform tetap tersedia dan informasi tetap akurat, namun layanan dapat terganggu sementara untuk pemeliharaan, pembaruan, kendala teknis, atau keadaan di luar kendali kami. Kami dapat memperbarui, menangguhkan, atau menghentikan fitur tertentu sesuai kebutuhan operasional dan ketentuan hukum.</p>
+    </section>
+    <section id="terms-hak-kekayaan">
+      <h3><span class="num">10</span> Hak Kekayaan Intelektual</h3>
+      <p>Nama, logo, tampilan, teks, dan materi lain pada platform WeiDro dimiliki oleh WeiDro atau digunakan berdasarkan izin dari pemiliknya. Anda tidak boleh menyalin, mengubah, mendistribusikan, atau menggunakan materi tersebut untuk tujuan komersial tanpa persetujuan tertulis, kecuali diizinkan oleh hukum.</p>
+    </section>
+    <section id="terms-pembatasan">
+      <h3><span class="num">11</span> Pembatasan Tanggung Jawab</h3>
+      <p>Sejauh diizinkan oleh hukum, WeiDro tidak bertanggung jawab atas kerugian yang timbul dari informasi yang tidak akurat atau tidak lengkap yang Anda berikan, penggunaan akun tanpa izin akibat kelalaian Anda, maupun gangguan yang disebabkan keadaan di luar kendali wajar kami.</p>
+      <p>Ketentuan ini tidak menghapus tanggung jawab yang tidak dapat dikecualikan atau dibatasi berdasarkan peraturan perundang-undangan yang berlaku.</p>
+    </section>
+    <section id="terms-perubahan">
+      <h3><span class="num">12</span> Perubahan Ketentuan</h3>
+      <p>WeiDro dapat memperbarui Syarat dan Ketentuan ini dari waktu ke waktu. Versi terbaru akan dipublikasikan pada platform beserta tanggal mulai berlakunya. Jika perubahan berdampak penting pada penggunaan layanan, kami akan memberikan pemberitahuan melalui saluran yang wajar.</p>
+      <p>Penggunaan layanan setelah perubahan berlaku berarti Anda menggunakan layanan berdasarkan ketentuan yang telah diperbarui. Jika Anda tidak menyetujuinya, hentikan penggunaan layanan dan hubungi kami untuk pertanyaan mengenai pesanan yang masih berjalan.</p>
+    </section>
+    <section id="terms-hukum">
+      <h3><span class="num">13</span> Hukum yang Berlaku</h3>
+      <p>Syarat dan Ketentuan ini ditafsirkan berdasarkan hukum Republik Indonesia. Jika terdapat perselisihan, Anda dan WeiDro akan berupaya menyelesaikannya terlebih dahulu melalui komunikasi dengan itikad baik, tanpa mengurangi hak para pihak berdasarkan hukum yang berlaku.</p>
+    </section>
+    <section id="terms-kontak">
+      <h3><span class="num">14</span> Kontak</h3>
+      <p>Untuk pertanyaan, keluhan, atau bantuan terkait ketentuan ini maupun pesanan Anda, hubungi WeiDro melalui email di <a class="email-link" href="mailto:weidrowatersolution@gmail.com">weidrowatersolution@gmail.com</a>.</p>
+    </section>
+
+    <div class="doc-divider" id="privacy-heading">
+      <h2>Kebijakan Privasi</h2>
+      <p>Informasi tentang pengumpulan, penggunaan, perlindungan, dan hak Anda atas data pribadi.</p>
+    </div>
+
+    <section id="privacy-pengenalan">
+      <h3><span class="num">1</span> Pengenalan</h3>
+      <p>Kami menjaga privasi pelanggan dengan serius dan kami hanya akan mengumpulkan serta menggunakan informasi pribadi Anda sesuai dengan uraian di bawah ini.</p>
+      <p>Perlindungan data adalah hal yang menyangkut kepercayaan dan privasi Anda sangatlah penting bagi kami. Oleh karena itu, kami hanya akan menggunakan nama Anda dan informasi lain yang berhubungan dengan Anda sesuai dengan kebijakan privasi ini. Kami hanya akan mengumpulkan informasi yang penting bagi kami dan hanya informasi yang dibutuhkan untuk menjalankan layanan serta transaksi dengan Anda.</p>
+      <p>Kami hanya akan menyimpan informasi Anda selama dibutuhkan, diwajibkan oleh hukum, atau selama informasi tersebut berhubungan dengan tujuan-tujuan yang ada saat informasi dikumpulkan.</p>
+      <p>Kebijakan privasi kami mengikuti ketentuan perundang-undangan yang berlaku di Indonesia, termasuk Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP). Bila Anda memiliki komentar dan masukan, kami dengan senang hati menerimanya melalui alamat email kami di <a class="email-link" href="mailto:weidrowatersolution@gmail.com">weidrowatersolution@gmail.com</a>.</p>
+    </section>
+    <section id="privacy-dasar-hukum">
+      <h3><span class="num">2</span> Dasar Hukum Pengolahan Data Pribadi</h3>
+      <p>WeiDro memproses informasi pribadi Anda berdasarkan satu atau lebih dasar hukum berikut sesuai dengan peraturan yang berlaku:</p>
+      <ul class="dotlist">
+        <li><strong>Persetujuan:</strong> Anda memberikan persetujuan eksplisit saat mendaftar atau menggunakan layanan aplikasi mobile dan website WeiDro.</li>
+        <li><strong>Pelaksanaan Kontrak:</strong> Pemrosesan data diperlukan untuk menyediakan layanan pemesanan, pengiriman barang, dan pemrosesan transaksi.</li>
+        <li><strong>Kewajiban Hukum:</strong> Pemrosesan dilakukan untuk mematuhi peraturan perundang-undangan yang berlaku, termasuk perintah pengadilan atau ketentuan perpajakan.</li>
+        <li><strong>Kepentingan Sah:</strong> Untuk meningkatkan keamanan sistem, mencegah kecurangan (fraud), dan mengoptimalkan kualitas layanan kami.</li>
+      </ul>
+    </section>
+    <section id="privacy-pengumpulan">
+      <h3><span class="num">3</span> Pengumpulan Informasi Pribadi</h3>
+      <p>WeiDro tidak menjual, menyebarkan, atau memperdagangkan informasi pribadi milik pelanggan yang didapatkan secara online kepada pihak ketiga tanpa persetujuan Anda.</p>
+      <p>Informasi pribadi yang dikumpulkan secara online dipergunakan oleh WeiDro dalam rangka memberikan pelayanan serta operasional internal.</p>
+      <p>Saat Anda membuat akun atau menggunakan platform WeiDro (baik melalui aplikasi mobile maupun website), informasi pribadi yang mungkin kami kumpulkan termasuk namun tidak terbatas pada:</p>
+      <ul class="checklist">
+        <li>Nama Lengkap</li>
+        <li>Alamat Email</li>
+        <li>Nomor Telepon / WhatsApp</li>
+        <li>Kartu Tanda Penduduk (KTP) / Identitas Resmi</li>
+        <li>Informasi Lokasi (GPS)</li>
+      </ul>
+      <p>Informasi pribadi yang kami dapatkan dari Anda akan digunakan untuk:</p>
+      <ul class="dotlist">
+        <li>Memberikan informasi yang berhubungan dengan produk dan layanan pemesanan barang.</li>
+        <li>Menjalankan proses pemesanan dan pengiriman barang serta memberikan pelayanan yang Anda harapkan.</li>
+        <li>Mengelola administrasi akun Anda di layanan WeiDro.</li>
+        <li>Verifikasi dan pengolahan transaksi keuangan pembayaran online.</li>
+        <li>Mengirimkan bahan-bahan promosi atau pemasaran dari waktu ke waktu. Anda dapat berhenti berlangganan kapan saja melalui fitur <em>unsubscribe</em> pada materi promosi elektronik yang kami kirimkan.</li>
+      </ul>
+    </section>
+    <section id="privacy-pembayaran">
+      <h3><span class="num">4</span> Pembayaran</h3>
+      <p>Pembayaran yang Anda lakukan melalui aplikasi mobile atau website ini akan diproses oleh agen/sistem resmi WeiDro. Anda wajib memberikan informasi yang akurat dan tidak menyesatkan, serta senantiasa memperbarui informasi tersebut apabila terjadi perubahan.</p>
+      <p>Rincian pemesanan Anda akan kami simpan untuk alasan keamanan dan riwayat transaksi. Anda dapat mengakses riwayat tersebut dengan melakukan login ke akun Anda melalui aplikasi mobile atau website WeiDro untuk melihat pemesanan yang pernah dilakukan, pemesanan yang aktif, atau dalam proses pengiriman.</p>
+      <p>Anda setuju bahwa akses data pribadi dan kredensial akun bersifat konfidensial dan rahasia. Anda tidak diperkenankan membiarkan pihak ketiga mengakses data pribadi tersebut tanpa izin. Kami tidak bertanggung jawab atas penyalahgunaan kata sandi, kecuali penyalahgunaan tersebut merupakan kelalaian dari pihak kami.</p>
+    </section>
+    <section id="privacy-pembaruan">
+      <h3><span class="num">5</span> Memperbarui Informasi Pribadi Anda</h3>
+      <p>Anda dapat memperbarui dan mengoreksi informasi pribadi Anda kapan saja dengan mengakses menu pengaturan profil di dalam aplikasi mobile maupun website WeiDro.</p>
+    </section>
+    <section id="privacy-keamanan">
+      <h3><span class="num">6</span> Keamanan Informasi Pribadi Anda</h3>
+      <p>WeiDro memastikan bahwa seluruh informasi yang dikumpulkan akan disimpan secara aman. Kami melindungi informasi pribadi Anda dengan cara:</p>
+      <ul class="checklist">
+        <li>Membatasi akses pihak yang tidak berkepentingan ke dalam data pribadi Anda.</li>
+        <li>Mengelola dan memperbarui produk teknologi serta infrastruktur keamanan untuk mencegah akses komputer/server tanpa izin.</li>
+        <li>Menghancurkan atau menganonimkan informasi pribadi Anda secara aman saat tidak lagi dibutuhkan untuk tujuan operasional maupun retensi hukum.</li>
+      </ul>
+    </section>
+    <section id="privacy-lokasi">
+      <h3><span class="num">7</span> Meminta Akses Lokasi</h3>
+      <p>Saat menggunakan aplikasi mobile, akan ada pemberitahuan aktivasi izin lokasi untuk keperluan pelacakan (<em>tracking</em>) pengiriman, penentuan lokasi penjemputan/tujuan, dan penghitungan estimasi pengiriman.</p>
+      <div class="callout"><strong>Catatan:</strong> Akses lokasi mungkin tetap aktif di latar belakang (background) saat proses pengiriman berlangsung, bahkan saat aplikasi ditutup atau tidak aktif digunakan, guna memastikan pembaruan status pengiriman secara akurat.</div>
+    </section>
+    <section id="privacy-hak-pengguna">
+      <h3><span class="num">8</span> Hak Anda sebagai Subjek Data Pribadi</h3>
+      <p>Sesuai dengan Undang-Undang Pelindungan Data Pribadi (UU PDP No. 27 Tahun 2022), Anda memiliki hak-hak berikut terkait data pribadi Anda yang dikelola oleh WeiDro:</p>
+      <ul class="checklist">
+        <li><strong>Hak Akses &amp; Kejelasan:</strong> Mengakses dan memperoleh salinan data pribadi Anda yang kami simpan.</li>
+        <li><strong>Hak Pembetulan (Koreksi):</strong> Meminta pembaruan atau perbaikan jika data pribadi Anda tidak akurat atau tidak lengkap.</li>
+        <li><strong>Hak Penghapusan (Pemusnahan):</strong> Meminta penghapusan atau pemusnahan data pribadi Anda (<em>right to be forgotten</em>) sesuai ketentuan hukum.</li>
+        <li><strong>Hak Penarikan Persetujuan:</strong> Menarik kembali persetujuan pengolahan data pribadi yang telah Anda berikan sebelumnya.</li>
+        <li><strong>Hak Mengajukan Keberatan:</strong> Membatasi atau menolak pengolahan data pribadi untuk tujuan tertentu, seperti pemasaran langsung.</li>
+        <li><strong>Hak Pengaduan:</strong> Mengajukan keluhan atas pemrosesan data pribadi Anda kepada otoritas pelindungan data pribadi yang berwenang.</li>
+      </ul>
+      <p>Untuk mengajukan permohonan pelaksanaan hak-hak di atas, silakan hubungi kami melalui email di <a class="email-link" href="mailto:weidrowatersolution@gmail.com">weidrowatersolution@gmail.com</a>.</p>
+    </section>
+    <section id="privacy-penyingkapan">
+      <h3><span class="num">9</span> Penyingkapan Informasi Pribadi</h3>
+      <p>Kami tidak akan membagikan informasi Anda dengan organisasi lain selain mitra pengiriman/mitra pengemudi dan penyedia layanan pihak ketiga yang berhubungan langsung dengan operasional transaksi Anda di aplikasi/website WeiDro.</p>
+      <p>Dalam situasi tertentu yang dikecualikan, WeiDro mungkin diwajibkan untuk mengungkapkan informasi pribadi Anda, termasuk ketika:</p>
+      <ul class="dotlist">
+        <li>Terdapat perintah pengadilan, kepolisian, atau kewajiban hukum yang berlaku di Indonesia.</li>
+        <li>Terdapat bukti bahwa pengungkapan informasi diperlukan untuk mencegah ancaman keselamatan jiwa, kesehatan, atau keamanan fisik seseorang.</li>
+        <li>Diperlukan untuk kepentingan penegakan hukum dan investigasi fraud.</li>
+      </ul>
+      <p>Bila Anda percaya bahwa privasi Anda telah dilanggar oleh WeiDro, silakan hubungi kami di <a class="email-link" href="mailto:weidrowatersolution@gmail.com">weidrowatersolution@gmail.com</a> untuk penanganan lebih lanjut.</p>
+    </section>
+    <section id="privacy-data-perangkat">
+      <h3><span class="num">10</span> Pengumpulan Data Perangkat &amp; Analytics</h3>
+      <p>Saat Anda mengakses layanan WeiDro melalui aplikasi mobile maupun website, server dan sistem analitik kami akan mengumpulkan informasi teknis yang dikirimkan oleh perangkat Anda secara otomatis. Data ini mencakup:</p>
+      <ul class="checklist">
+        <li>Alamat IP (Internet Protocol) perangkat Anda.</li>
+        <li>Jenis, model, dan sistem operasi perangkat (smartphone atau komputer).</li>
+        <li>Pelacakan lokasi geografis saat ini (jika izin lokasi diaktifkan).</li>
+        <li>Waktu yang dihabiskan pada halaman/menu tertentu, produk yang dicari, statistik akses, serta data log interaksi.</li>
+      </ul>
+      <p>Informasi teknis tersebut digunakan untuk analisis, evaluasi, serta perbaikan performa aplikasi mobile dan website WeiDro. Data ini diproses secara terintegrasi guna meningkatkan keamanan dan kenyamanan Anda.</p>
+      <p>WeiDro menggunakan platform analitik pihak ketiga yaitu <strong>Google Analytics</strong> untuk memantau performa dan efektivitas layanan, termasuk fitur Remarketing, Google Display Network Impression Reporting, integrasi DoubleClick, serta Laporan Demografi dan Minat Google Analytics. Anda dapat mengelola atau memilih keluar (opt-out) dari layanan Iklan Google melalui Setelan Iklan Google (<a class="email-link" href="https://www.google.com/settings/ads">https://www.google.com/settings/ads</a>).</p>
+      <p>Selain Google Analytics dan penyedia infrastruktur cloud/server pendukung operasional, WeiDro tidak membagikan data analitik Anda kepada platform analitik pihak ketiga lainnya.</p>
+    </section>
+    <section id="privacy-data-anak">
+      <h3><span class="num">11</span> Perlindungan Data Anak</h3>
+      <p>Layanan WeiDro tidak ditujukan untuk anak-anak di bawah usia 17 tahun (atau batas usia anak sesuai ketentuan perundang-undangan yang berlaku di Indonesia). Kami tidak secara sengaja mengumpulkan data pribadi dari anak-anak tanpa persetujuan dari orang tua atau wali sah yang bersangkutan.</p>
+      <p>Jika Anda merupakan orang tua/wali dan mengetahui bahwa anak Anda telah memberikan data pribadi kepada kami tanpa persetujuan Anda, silakan hubungi kami di <a class="email-link" href="mailto:weidrowatersolution@gmail.com">weidrowatersolution@gmail.com</a> agar kami dapat segera mengambil langkah penghapusan data tersebut.</p>
+    </section>
+    <section id="privacy-pelanggaran-data">
+      <h3><span class="num">12</span> Penanganan Pelanggaran Data (Data Breach)</h3>
+      <p>WeiDro berkomitmen untuk menjaga keamanan data pribadi pengguna secara maksimal. Apabila terjadi kegagalan pelindungan data pribadi (kebocoran atau akses tidak sah) pada sistem kami, kami akan menyampaikan pemberitahuan secara tertulis kepada Pengguna dan Otoritas Pelindungan Data Pribadi dalam waktu maksimal 3 x 24 jam (72 jam) sejak terjadinya pelanggaran tersebut sesuai ketentuan UU PDP.</p>
+    </section>
+    <section id="privacy-perubahan">
+      <h3><span class="num">13</span> Perubahan Kebijakan Privasi</h3>
+      <p>WeiDro berhak untuk memperbarui dan memodifikasi Kebijakan Privasi ini sewaktu-waktu. Pemberitahuan mengenai perubahan kebijakan ini akan dipublikasikan di platform website dan/atau aplikasi mobile kami sebelum tanggal penyesuaian mulai diberlakukan.</p>
+    </section>
+    <section id="privacy-keluhan">
+      <h3><span class="num">14</span> Keluhan dan Kontak Pelanggaran Hak Privasi</h3>
+      <p>Apabila Anda memiliki pertanyaan, keluhan, atau keberatan terkait penanganan data pribadi dan hak privasi Anda pada platform WeiDro, harap langsung menghubungi kami melalui email di <a class="email-link" href="mailto:weidrowatersolution@gmail.com">weidrowatersolution@gmail.com</a>.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2026 <strong>WeiDro</strong>. Seluruh hak cipta dilindungi.</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll('.sidebar a');
+  const navigationTargets = document.querySelectorAll('.doc-divider, main section');
+
+  function updateActiveLink() {
+    let current = navigationTargets[0].id;
+    navigationTargets.forEach(target => {
+      if (window.scrollY >= target.offsetTop - 140) current = target.id;
+    });
+    if (current.endsWith('-heading')) {
+      const firstSection = current === 'terms-heading' ? 'terms-persetujuan' : 'privacy-pengenalan';
+      current = firstSection;
+    }
+    links.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
+</script>
+
+</body>
+</html>
